@@ -22,6 +22,6 @@ app.use('/api/tasks', routes);
 app.use(express.static(path.join(__dirname, 'public')));
 
 // Starting the server
-app.listen(3000, () => {
+app.listen(process.env.PORT, () => {
     console.log(`Server on port ${app.get('port')}`);
 });
